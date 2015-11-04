@@ -26,6 +26,9 @@ namespace NugetPackageRestore
         [Required]
         public string PackagesDir { get; set; }
 
+        [Required]
+        public string ProjectName { get; set; }
+
         public bool AddContentReferencesToProject
         {
             get
@@ -63,7 +66,7 @@ namespace NugetPackageRestore
                 return false;
             }
 
-            PackageInstaller installer = new PackageInstaller(PackagesDir, ProjectFileFullPath, new MsBuildConsole(Log), AddContentReferencesToProject);
+            PackageInstaller installer = new PackageInstaller(PackagesDir, ProjectFileFullPath, new MsBuildConsole(Log), ProjectName, AddContentReferencesToProject);
 
             Log.LogMessage(MessageImportance.Normal, "NugetPackageRestore :: SolutionDir='{0}'", SolutionDir);
             Log.LogMessage(MessageImportance.Normal, "NugetPackageRestore :: ProjectDir='{0}'", ProjectDir);
