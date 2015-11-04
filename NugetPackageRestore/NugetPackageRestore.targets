@@ -10,6 +10,6 @@
       ConfigFileFullPath            = "$(ProjectDir)mypackages.config" <- Full path to packages config file, set to $(ProjectDir)packages.config by default
       ProjectFileFullPath           = "$(ProjectDir)myproject.csproj"  <- Full path to project file, set to $(ProjectDir)*.csproj by default
     -->
-    <NugetPackageRestoreTask SolutionDir="$(SolutionDir)" ProjectDir="$(ProjectDir)" PackagesDir="$(SolutionDir)packages" />
+    <NugetPackageRestoreTask SolutionDir="$(SolutionDir)" ProjectDir="$(ProjectDir)" PackagesDir="$(SolutionDir)packages" ProjectName="$(ProjectName)" />
   </Target>
 </Project>

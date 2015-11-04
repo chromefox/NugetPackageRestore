@@ -10,13 +10,19 @@ namespace NugetPackageRestore
 {
     public class PackageInstaller
     {
-        private static string _flagFileName = "packageInstaller.xst";
+        private string _flagFileName
+        {
+            get { return string.Format("{0}-packageInstaller.xst", _projectName); }
+        }
+
         private readonly string _localRepositoryPath;
         private readonly IMSBuildProjectSystem _projectSystem;
         private readonly IProjectManager _projectManager;
+        private readonly string _projectName;
 
-        public PackageInstaller(string localRepositoryPath, string projectPath, IConsole console, bool addReferencesToProject)
+        public PackageInstaller(string localRepositoryPath, string projectPath, IConsole console, string projectName, bool addReferencesToProject)
         {
+            _projectName = projectName;
             _localRepositoryPath                     = localRepositoryPath;
             IPackagePathResolver packagePathResolver = new DefaultPackagePathResolver(localRepositoryPath);
             IPackageRepository localRepository       = new UnzipedLocalPackageRepository(localRepositoryPath, _flagFileName);
