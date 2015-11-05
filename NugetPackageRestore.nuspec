@@ -1,31 +1,34 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>NugetPackageRestore</id>
-    <version>1.0.3</version>
-    <authors>Alberto Rechy</authors>
-    <owners>Alberto Rechy</owners>
-    <projectUrl>https://github.com/deeplight77/NugetPackageRestore</projectUrl>
-    <licenseUrl>https://github.com/deeplight77/NugetPackageRestore#license</licenseUrl>
+    <id>NugetPackageRestoreEnhanced</id>
+    <version>1.0.2</version>
+    <authors>Ronny Muliawan</authors>
+    <owners>Ronny Muliawan</owners>
+    <projectUrl>https://github.com/chromefox/NugetPackageRestore</projectUrl>
+    <licenseUrl>https://github.com/chromefox/NugetPackageRestore#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>MSBuild task to install Nuget packages from local packages folder downloaded by Nuget Package Restore</description>
-    <releaseNotes>
-	*1.0.3
-		-Fix: Removed installing dependencies of packages, this caused the main package not to be installed.
-	*1.0.2
-	    -Fix: Error thrown when attempting to overwrite an existing .xst file
-	*1.0.1
-        -fix: Commented a debugging line on main code
+    <releaseNotes>	
 	* 1.0.0
-        -Initial release.
+        -Initial release. Added multi-project support based on NugetPackageRestore 1.0.5 by Alberto Rechy.
 	</releaseNotes>
-    <copyright>Copyright 2014, Alberto Rechy</copyright>
+    <copyright>Copyright 2015, Ronny Muliawan</copyright>
     <tags>nuget package content restore reinstall msbuild task</tags>
   </metadata>
   <files>
-    <file src="NugetPackageRestore\NugetPackageRestore.dll" target="build\net40" />
-    <file src="NugetPackageRestore\NugetPackageRestore.targets" target="build\net40" />
+    <file src="NugetPackageRestore\NugetPackageRestoreEnhanced.dll" target="build\net40" />
+    <file src="NugetPackageRestore\NugetPackageRestoreEnhanced.targets" target="build\net40" />
 	<file src="NugetPackageRestore\NuGet.exe" target="build\net40" />
+	<file src="NugetPackageRestore\NugetPackageRestoreEnhanced.dll" target="build\net45" />
+    <file src="NugetPackageRestore\NugetPackageRestoreEnhanced.targets" target="build\net45" />
+	<file src="NugetPackageRestore\NuGet.exe" target="build\net45" />
+	<file src="NugetPackageRestore\NugetPackageRestoreEnhanced.dll" target="build\net451" />
+    <file src="NugetPackageRestore\NugetPackageRestoreEnhanced.targets" target="build\net451" />
+	<file src="NugetPackageRestore\NuGet.exe" target="build\net451" />
+	<file src="NugetPackageRestore\NugetPackageRestoreEnhanced.dll" target="build\net452" />
+    <file src="NugetPackageRestore\NugetPackageRestoreEnhanced.targets" target="build\net452" />
+	<file src="NugetPackageRestore\NuGet.exe" target="build\net452" />
     <file src="readme.txt" target="" />
   </files>
 </package>

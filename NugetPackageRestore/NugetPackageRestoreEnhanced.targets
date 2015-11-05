@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<UsingTask AssemblyFile="NugetPackageRestore.dll" TaskName="NugetPackageRestoreTask" />
+	<UsingTask AssemblyFile="NugetPackageRestoreEnhanced.dll" TaskName="NugetPackageRestoreTask" />
   <Target Name="BeforeBuild" >
     <!-- Available options (with example values) are:
       SolutionDir                   = "$(SolutionDir)"                 <- Full path to your solution
